@@ -18,7 +18,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-    - run: docker build -f Dockerfilehub . -tag selenium-hub
+     run: docker build -f Dockerfilehub . -tag selenium-hub
         
 
 # ##Selenium Hub Application Deployment####
