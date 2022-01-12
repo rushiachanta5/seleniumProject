@@ -18,17 +18,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
-
-
- 
     - run: docker build -f Dockerfilehub . -tag selenium-hub
         
- 
-    
-    # Create namespace if doesn't exist
-    - run: |
-        kubectl create namespace ${{ env.NAMESPACE }} --dry-run -o json | kubectl apply -f -
 
 # ##Selenium Hub Application Deployment####
 
